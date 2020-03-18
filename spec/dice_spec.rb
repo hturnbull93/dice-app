@@ -8,9 +8,17 @@ describe Dice do
     expect(dice).to respond_to(:roll)
   end
 
-  it "#roll returns a random number between 1 and 6 inclusive" do
-    expect(dice.roll).to be <= 6
-    expect(dice.roll).to be >= 1
+  
+  describe "#roll" do
+    it "returns a random number between 1 and 6 inclusive" do
+      expect(dice.roll).to be <= 6
+      expect(dice.roll).to be >= 1
+    end
+    
+    it "contains #rand" do
+      expect(dice.roll).to eq "rand(1..6)"
+    end
+
   end
 
 end
