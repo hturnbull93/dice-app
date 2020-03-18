@@ -18,6 +18,8 @@ describe Dice do
     it "contains #rand" do
       expect(dice.roll).to eq "rand(1..6)"
     end
+    # see here for how to fix  
+    # https://relishapp.com/rspec/rspec-mocks/docs/setting-constraints/matching-arguments
 
   end
 
